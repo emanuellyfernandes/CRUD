@@ -1,5 +1,25 @@
 
 <?php
+
+
+$dbHost = 'Localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'login_page';
+
+$conexao = new mysqli($dbHost,$dbUsername,$dbPassword, $dbName);
+
+/*if($usuarios ->connect_errno)
+{
+  echo"erro";
+}
+else
+{
+ echo"conexao efetuada com sucesso";
+}
+*/
+
+
  
  if(isset($_POST['btlogin']) && !empty($_POST['email']) && !empty($_POST['senha']))
     {
