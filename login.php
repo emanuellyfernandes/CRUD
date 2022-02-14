@@ -1,25 +1,6 @@
 
 <?php
 
-
-$dbHost = 'Localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'login_page';
-
-$conexao = new mysqli($dbHost,$dbUsername,$dbPassword, $dbName);
-
-/*if($usuarios ->connect_errno)
-{
-  echo"erro";
-}
-else
-{
- echo"conexao efetuada com sucesso";
-}
-*/
-
-
  
  if(isset($_POST['btlogin']) && !empty($_POST['email']) && !empty($_POST['senha']))
     {
@@ -32,7 +13,7 @@ else
 
         $sql = "SELECT * FROM usuarios WHERE email = ('$email') and senha = ('$senha')";
 
-        $result = mysqli_query($conexao,"INSERT INTO usuarios(razao, cnpj, email, senha) VALUES ('$razao', '$cnpj', '$email',' $senha')");
+        
 
         $result = $conexao->query($sql);
 
